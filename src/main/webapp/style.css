@@ -28,7 +28,7 @@
     border-radius: 30px;
 }
 .togglebtn {
-    padding: 10px 30px;
+    padding: 10px 90px;
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    width: 110px;
+    width: 230px;
     height: 100%;
     background: linear-gradient(to right, #ff105f, #ffad06);
     border-radius: 30px;
