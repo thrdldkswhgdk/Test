@@ -1,55 +1,85 @@
-.layout{
-    max-width: 600px;
-    margin: 0 auto;
+body{margin-top:20px;}
+.section_padding_130 {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.faq_area {
+    position: relative;
+    z-index: 1;
+    background-color: #f5f5ff;
 }
 
-.qna{
-    list-style: none;
-    margin: 0;
+.faq-accordian {
+    position: relative;
+    z-index: 1;
+}
+.faq-accordian .card {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+}
+.faq-accordian .card:last-child {
+    margin-bottom: 0;
+}
+.faq-accordian .card .card-header {
+    background-color: #ffffff;
     padding: 0;
+    border-bottom-color: #ebebeb;
 }
-.qna > li{
-  padding: 10px 0;
-  box-sizing: border-box;
+.faq-accordian .card .card-header h6 {
+    cursor: pointer;
+    padding: 1.75rem 2rem;
+    color: #3f43fd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
-.qna > li:nth-child(n+2){ /* 아이템 구분 점선 */
-  border-top: 1px dashed #aaa;
+.faq-accordian .card .card-header h6 span {
+    font-size: 1.5rem;
 }
-.qna input {
-  display: none;
+.faq-accordian .card .card-header h6.collapsed {
+    color: #070a57;
 }
-.qna label { /* 제목 - 클릭 영역 */
-  font-weight: bold;
-  color: #000;
-  margin: 20px 0 0;
-  cursor: pointer;
+.faq-accordian .card .card-header h6.collapsed span {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
-.qna label::before { /* 제목 앞 화살표 */
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  border-left: 8px solid #a00;
-  margin: 2px 0 0 8px;
-  float: left;
+.faq-accordian .card .card-body {
+    padding: 1.75rem 2rem;
 }
-.qna input:checked + label::before { /* 내용 펼침 상태 제목 앞 화살표 */
-  border: 8px solid transparent;
-  border-top: 8px solid #a00;
-  border-bottom: 0;
-  margin: 8px 4px 0;
+.faq-accordian .card .card-body p:last-child {
+    margin-bottom: 0;
 }
 
-.qna div { /* 내용 영역 - 기본 감춤 상태 */
-  display: none;
-  color: #666;
-  font-size: 0.9375em;
-  overflow: hidden;
-  padding: 10px 0 10px 30px;
-  box-sizing: border-box;
-  transition: max-height 0.4s;
+@media only screen and (max-width: 575px) {
+    .support-button p {
+        font-size: 14px;
+    }
 }
-.qna input:checked + label + div { /* 내용 영역 펼침 */
-  display: block;
+
+.support-button i {
+    color: #3f43fd;
+    font-size: 1.25rem;
+}
+@media only screen and (max-width: 575px) {
+    .support-button i {
+        font-size: 1rem;
+    }
+}
+
+.support-button a {
+    text-transform: capitalize;
+    color: #2ecc71;
+}
+@media only screen and (max-width: 575px) {
+    .support-button a {
+        font-size: 13px;
+    }
 }
