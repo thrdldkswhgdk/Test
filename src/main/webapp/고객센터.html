@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="zxx">
-<html>
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>후기 게시판</title>
-<meta name="description" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hotel</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-<link rel="stylesheet" type="text/css" href="./assets/css/view.css" />
-<!-- CSS here -->
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    
+  <!-- CSS here -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/gijgo.css">
@@ -23,17 +26,17 @@
   <link rel="stylesheet" href="assets/css/nice-select.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
 
-</head>
-</head>
 <body>
-	<!-- Preloader Start -->
+    
+    <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <strong>후기 게시판</b>
+                    <strong>Hotel</b>
                 </div>
             </div>
         </div>
@@ -64,10 +67,9 @@
                                                 <li><a href="qna.html">1:1문의 목록</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Pages</a>
+                                        <li><a href="#">마이페이지</a>
                                             <ul class="submenu">
-                                                <li><a href="rooms.html">Rooms</a>
-                                                <li><a href="elements.html">Element</a></li>
+                                                <li><a href="rooms.html">회원정보</a>
                                             </ul>
                                         </li>
                                         
@@ -91,98 +93,173 @@
         </div>
         <!-- Header End -->
     </header>
-	<div id="mainWrapper">
-		<ul>
-			<!-- 게시판 제목 -->
-			<li>게시판 Title </li>
+       <!-- slider Area Start-->
+       <div class="slider-area">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg" >
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
+                        <div class="hero-caption">
+                            <span>고객센터</span>
+                            <h2>공지사항</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider Area End-->
+    
+    <!--================Blog Area =================-->
+    <!--  //////////////////////////////////// -->
+    <jsp:include page="/Admins/AdminsHeader.jsp" flush="false" />
+    <!--  //////////////////////////////////// -->
 
-			<!-- 게시판 목록  -->
-			<li>
-				Table
-				<ul id ="ulTable">
-					<li>
-						<ul>
-							<li>No</li>
-							<li>제목</li>
-							<li>작성일</li>
-							<li>작성자</li>
-							<li>조회수</li>
-						</ul>
-					</li>
-					<!-- 게시물이 출력될 영역 -->
-					<li>
-						<ul>
-							<li>1</li>
-							<li class="left">가지마가지마</li>
-							<li>2021.10.15</li>
-							<li>나얼</li>
-							<li>0</li>
-						</ul>
-					</li>
+    <!-- Page Content -->
+    <div class="container">
 
-					<li>
-						<ul>
-							<li>2</li>
-							<li class="left">미워지지가 않아</li>
-							<li>2021.11.01</li>
-							<li>노을</li>
-							<li>0</li>
-						</ul>
-					</li>
+        <!-- Page Heading/Breadcrumbs -->
+ 
+        <!-- /.row -->
 
-					<li>
-						<ul>
-							<li>3</li>
-							<li class="left">나비효과</li>
-							<li>2021.11.04</li>
-							<li>볼빨간 사춘기</li>
-							<li>0</li>
-						</ul>
-					</li>
+        <!-- Content Row -->
+        
+           
+            <div class="col-md-12">
+                <!-- 소제목 -->
+                <div class="col-lg-12">
+                    <h2 class="page-header">공지사항</h2>
+                </div>
+                <!-- ----- -->
 
-					<li>
-						<ul>
-							<li>4</li>
-							<li class="left">백반청국장</li>
-							<li>2021.11.07</li>
-							<li>호미들</li>
-							<li>0</li>
-						</ul>
-					<li>										
-				</ul>
-			</li>
+                <!-- Content Column -->
+                <div class="col-lg-12">
 
-			<!-- 게시판 페이징 영역 -->
-			<li>
-				<div id="divPaging">
-					<div>◀</div>
-               		<div><b>1</b></div>
-                	<div>2</div>
-                	<div>3</div>
-                	<div>4</div>
-                	<div>5</div>
-                	<div>▶</div>
-				</div>
-			</li>
+                        <!-- Content Column -->
+                        <div class="table-responsive">
+                            <form role="form">
+                                <table class="table table-striped">
+                                    <thead>	<!-- 테이블 헤더영역 -->
+                                        <tr class="active">
+                                            <th>번호</th>
+                                            <th>제목</th>
+                                            <th>작성자</th>
+                                            <th>날짜</th>
+                                            <th>조회수</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody> <!-- 테이블 본문영역 -->
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href = "announcement.html">펜션</a></td>
+                                            <td>관리자</td>
+                                            <td>2021.11.08</td>
+                                            <td>2</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>2</td>
+                                            <td>호텔</td>
+                                            <td>관리자</td>
+                                            <td>2021.11.08</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>모텔</td>
+                                            <td>관리자</td>
+                                            <td>2021.11.08</td>
+                                            <td>2</td>
+                                        </tr>
+                                    
+                                    </tbody>
+                                    
+                                </table>
+                            </form>
 
-			<!-- 검색 폼 영역 -->
-			<li id='liSearchOption'>
-	            <div>
-	                <select id='selSearchOption' value='center' >
-	                    <option value='A'>제목+내용</option>
-	                    <option value='T'>제목</option>
-	                    <option value='C'>내용</option>
-	                </select>
-	                <input id='txtKeyWord' />
-	                <input type='button' value='검색'/>
-	            </div>
-      	  	</li>
+                            <br style="clear: both">
+                            <p class="pull-right">
+                               
+                            </p>
 
-		</ul>
-	</div>
-	
-	    <footer>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+ 
        <!-- Footer Start-->
+       
+       <!-- Footer End-->
+   
+
+</body>
+</html>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer>
+        <!--/////////////////////////////////////////////////// -->
+        <jsp:include page="/Admins/AdminsFooter.jsp" flush="false" />
+        <!--/////////////////////////////////////////////////// -->
+    </footer>
+
+
+</body>
+
+</html>
+  
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+    <footer>
        <div class="footer-area black-bg footer-padding">
            <div class="container">
                <div class="row d-flex justify-content-between">
@@ -200,7 +277,7 @@
                          </div>
                          <div class="footer-pera">
                               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> YeogiJAVA | 2021-12-16 <i class="ti-star" aria-hidden="true"></i> by <a href="https://www.rapa.or.kr/ft/main.do" target="_blank">RAPA</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                          </div>
                       </div>
@@ -260,9 +337,9 @@
                </div>
            </div>
        </div>
-       <!-- Footer End-->
-   </footer>
-	<!-- JS here -->
+    </footer>
+
+<!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -299,7 +376,8 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-         <script>
+        
+    <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
             disableDaysOfWeek: [0, 0],
@@ -317,6 +395,6 @@
         var timepicker = $('#timepicker').timepicker({
          format: 'HH.MM'
      });
-   </script>
+    </script>
 </body>
-</html>
+</html>        
