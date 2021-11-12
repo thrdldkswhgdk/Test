@@ -1,0 +1,123 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import = "bean.*" %>
+<%@ page import = "ch11.logon.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>회원정보 수정</title>
+</head>
+
+<body>
+    <h1>회원정보 수정  페이지</h1>
+    <h2>updateForm.jsp</h2>
+   
+    <%
+    String id = (String)session.getAttribute("memId");
+    MemberDAO dao = MemberDAO.getInstance();//manager
+    MemberDTO dto = dao.getMember(id); //c
+    try{
+    %>
+   
+    <form name="updateform" action="updateMember.jsp" method="post" onSubmit="return checkIt()">
+    <table border="1">
+        <tr height="25">
+            <td colspan="2" bgcolor="#fffacd">계정정보 수정</td>
+        </tr>
+       
+        <tr>
+            <td height="30">사용자 ID</td>
+            <td width="450">
+                    <%=dto.getId()%> 
+            </td>
+        </tr>
+      
+        <tr>
+            <td height="30">비밀번호</td>
+            <td>
+                <input type="password" name="pw" size="15" maxlength="12" value="<%=dto.getPw()%>"></input>
+            </td>
+        </tr>
+       
+        <tr>
+            <td height="30">비밀번호 확인</td>
+            <td>
+                <input type="password" name="pw2" size="15" maxlength="12" value=""></input>
+            </td>
+        </tr>
+          
+        <tr height="25">
+            <td colspan="2" bgcolor="#fffacd">개인정보 수정</td>
+        </tr>  
+              
+        <tr>
+            <td height="30">이름</td>
+            <td>
+                <%=dto.getName()%>
+            </td>
+        </tr>
+      
+        <tr>
+            <td height="30">생일</td>
+            <td>
+                <%=dto.getMonth() + " " + dto.getDay()%>
+            </td>
+        </tr>
+      
+        <tr>
+            <td height="30">성별</td>
+            <td>
+                <%=dto.getSex()%>
+            </td>
+        </tr>
+       
+        <tr>
+            <td height="30">전화번호</td>
+            <td>
+                <%if(dto.getTel()==null){%>
+                      <input type="text" name="tel" size="40" maxlength="30" >
+                <%}else{%>
+                    <input type="text" name="tel" size="40" maxlength="30" value="<%=dto.getTel()%>">   
+                <%}%>
+            </td>
+        </tr>
+
+        <tr>
+            <td height="30">E-Mail</td>
+            <td>
+                <%if(dto.getEmail()==null){%>
+                      <input type="text" name="email" size="40" maxlength="30" >
+                <%}else{%>
+                    <input type="text" name="email" size="40" maxlength="30" value="<%=dto.getEmail()%>">   
+                <%}%>
+            </td>
+        </tr>
+    </table>
+        <input type="submit" value="수정">
+        <input type="button" name="cancel" value="변경 취소" onclick="javascript:window.location='main.jsp'">
+    </form>
+</body>
+
+<%}catch(Exception e){}%>
+
+<script language="JavaScript">
+  
+
+   function checkIt(){
+          if(document.updateform.pw.value != document.updateform.pw2.value || document.updateform.pw.value=="" || document.updateform.pw2.value=="" ){
+            alert("joinform : 비밀번호를 동일하게 입력하세요.");
+            return false;
+          }
+          if(!document.updateform.tel.value){
+              alert("joinform : 전화번호를 입력하지 않으셨습니다.");
+              return false;
+          }
+          if(!document.updateform.email.value){
+              alert("joinform : 이메일을 입력하지 않으셨습니다.");
+              return false;
+          }
+        }
+
+</script>
+
+</html>
