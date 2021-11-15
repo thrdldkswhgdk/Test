@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-<html>
+<html  class="no-js" lang="zxx">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>후기 게시판</title>
-<meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-<link rel="stylesheet" type="text/css" href="./assets/css/view.css" />
-<!-- CSS here -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="assets/css/gijgo.css">
-  <link rel="stylesheet" href="assets/css/slicknav.css">
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="assets/css/themify-icons.css">
-  <link rel="stylesheet" href="assets/css/themify-icons.css">
-  <link rel="stylesheet" href="assets/css/slick.css">
-  <link rel="stylesheet" href="assets/css/nice-select.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
-</head>
+    <title>여기자바</title>
+     <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/qna.css">
 </head>
 <body>
 	<!-- Preloader Start -->
@@ -33,12 +31,13 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <strong>후기 게시판</b>
+                    <strong>후기</b>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
+    <div class="layout">
+      <!-- Preloader Start -->
 
     <header>
         <!-- Header Start -->
@@ -58,7 +57,7 @@
                                 <nav>
                                     <ul id="navigation">                                                                                                                                    
                                         <li><a href="FAQ.html">FAQ</a></li>
-                                        <li><a href="blog.html">1:1문의</a>
+                                        <li><a href="qna.html">1:1문의</a>
                                             <ul class="submenu">
                                                 <li><a href="qna.html">내문의 내역</a></li>
                                                 <li><a href="qna.html">1:1문의 목록</a></li>
@@ -78,7 +77,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <!-- header-btn -->
                             <div class="header-btn">
-                                <a href="regist.html" class="btn btn1 d-none d-lg-block ">로그인</a>
+                                <a href="#" class="btn btn1 d-none d-lg-block ">로그인</a>
                             </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -91,15 +90,17 @@
         </div>
         <!-- Header End -->
     </header>
-      <!-- slider Area Start-->
+    
+    
+    <!-- slider Area Start-->
        <div class="slider-area">
         <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg" >
             <div class="container">
                 <div class="row ">
                     <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
                         <div class="hero-caption">
-                            <span>후기</span>
-                            <h2>후기 게시판</h2>
+                            <span>1:1 문의</span>
+                            <h2>문의게시판</h2>
                         </div>
                     </div>
                 </div>
@@ -107,107 +108,56 @@
         </div>
     </div>
     <!-- slider Area End-->
-	<div id="mainWrapper">
-		<ul>
-			<!-- 게시판 제목 -->
-			<li>게시판 Title </li>
+    
+    
+<section class="section_subpage">
+<meta charset="UTF-8">
+<div class="write_outline">
+<form name="qa" id="qa" enctype="multipart/form-data">
+<span class="write_title">후기 글 작성</span>
+<div class="write_qa">
+<ul class="need_write">
+    <li>
+        <span>제목</span>
+        <label><input type="text" name="qa_subject"></label>
+    </li>
+    <li>
+        <span>작성자</span>
+        <label><input type="text" name="qa_writer"></label>
+    </li>
+    <li>
+        <span>비밀번호</span>
+        <label><input type="password" name="qa_passwd"></label>
+    </li>
+    <li id="add_file">
+        <span>첨부파일</span>
+        <label>
+            <input type="text" readonly id="qa_file_txt1">
+            <label class="write_btn1" for="qa_file1">
+                <em>첨부</em>
+                <input type="file" id="qa_file1"  name="qa_file1">
+            </label>
+        </label>
+    </li>
+    <li>
+        <span>내용</span>
+        <label><textarea id="qatext" name="qatext" style="resize:none;"></textarea></label>
+    </li>
+</ul>
+</div>
+<div class="write_qa_btn"><br>
+    <span>
+    	<input type="button" value="돌아가기" onclick="location.href='review.html'">        
+    	<input type="button" value="등록하기" onclick="">
+    </span>
+</div>
+</div>
+</form>
+</section>
 
-			<!-- 게시판 목록  -->
-			<li>
-				Table
-				<ul id ="ulTable">
-					<li>
-						<ul>
-							<li>No</li>
-							<li>제목</li>
-							<li>작성일</li>
-							<li>작성자</li>
-							<li>조회수</li>
-						</ul>
-					</li>
-					<!-- 게시물이 출력될 영역 -->
-					<li>
-						<ul>
-							<li>1</li>
-							<li class="left">가지마가지마</li>
-							<li>2021.10.15</li>
-							<li>나얼</li>
-							<li>0</li>
-						</ul>
-					</li>
 
-					<li>
-						<ul>
-							<li>2</li>
-							<li class="left">미워지지가 않아</li>
-							<li>2021.11.01</li>
-							<li>노을</li>
-							<li>0</li>
-						</ul>
-					</li>
 
-					<li>
-						<ul>
-							<li>3</li>
-							<li class="left">나비효과</li>
-							<li>2021.11.04</li>
-							<li>볼빨간 사춘기</li>
-							<li>0</li>
-						</ul>
-					</li>
-
-					<li>
-						<ul>
-							<li>4</li>
-							<li class="left">백반청국장</li>
-							<li>2021.11.07</li>
-							<li>호미들</li>
-							<li>0</li>
-						</ul>
-					<li>										
-				</ul>
-			</li>
-				<!-- 검색 폼 영역 -->
-			<form name="review_search" action="/search" method="get">
-			<li id='liSearchOption'>
-				<div>
-					<input class="review_search" type="text" id='txtKeyWord' placeholder="제목+내용"/>
-					<input class="review_search2" type='button' value='검색' />
-				</div>
-			</li>
-		</form>
-		<span class="board_oneqa">
-			<input type="button" value="글 작성" onclick="location.href='review_write.html'">
-		</span>
-			
-
-			<!-- 게시판 페이징 영역 -->
-			<nav>
-			
-			<ul class="pagination pagination-sm justify-content-center">
-				<li class="page-item">
-					<a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-				<li class="page-item"><a class="page-link" href="#">1</a></li>
-				<li class="page-item"><a class="page-link" href="#">2</a></li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item">
-				
-				<a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-			</ul>
-				</div>
-		</nav>
-			
-
-		
-	                </select>
-	              
-	            </div>
-      	  	</li>
-
-		</ul>
-	</div>
-	
-	    <footer>
+<footer>
        <!-- Footer Start-->
        <div class="footer-area black-bg footer-padding">
            <div class="container">
@@ -226,7 +176,7 @@
                          </div>
                          <div class="footer-pera">
                               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> YeogiJAVA | 2021-12-16 <i class="ti-star" aria-hidden="true"></i> by <a href="https://www.rapa.or.kr/ft/main.do" target="_blank">RAPA</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                          </div>
                       </div>
@@ -288,8 +238,10 @@
        </div>
        <!-- Footer End-->
    </footer>
+ 
+ 
+
 	<!-- JS here -->
-	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		
@@ -325,24 +277,5 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-         <script>
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            disableDaysOfWeek: [0, 0],
-        //     icons: {
-        //      rightIcon: '<span class="fa fa-caret-down"></span>'
-        //  }
-        });
-        $('#datepicker2').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
-
-        });
-        var timepicker = $('#timepicker').timepicker({
-         format: 'HH.MM'
-     });
-   </script>
 </body>
 </html>
